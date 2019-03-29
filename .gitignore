@@ -61,4 +61,5 @@ typings/
 .ui5
 webapp/resources
 
+*.js
 webapp/data
