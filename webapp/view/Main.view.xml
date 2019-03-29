@@ -13,19 +13,6 @@
                     <vk:items>
                       <GroupHeaderListItem title="Transport" upperCase="false"/>
                       <vk:LegendItem title="Truck" icon="sap-icon://shipping-status"/>
-                      <vk:LegendItem title="Train" icon="sap-icon://cargo-train"/>
-                      <GroupHeaderListItem title="Status" upperCase="false"/>
-                      <vk:LegendItem title="&gt; 1h delay" color="rgb(211,32,48)"/>
-                      <vk:LegendItem title="&lt; 1h delay" color="rgb(225,123,36)"/>
-                      <vk:LegendItem title="on time" color="rgb(97,166,86)"/>
-                    </vk:items>
-                  </vk:ListPanel>
-                  <vk:ListPanel headerText="Location" headerIcon="sap-icon://factory" expanded="true"
-                                selectionMode="MultiSelect" selectionChange="onSelectionChange">
-                    <vk:items>
-                      <vk:LegendItem title="Frankfurt"/>
-                      <vk:LegendItem title="Hamburg"/>
-                      <vk:LegendItem title="Munich"/>
                     </vk:items>
                   </vk:ListPanel>
                 </vk:content>
@@ -34,8 +21,21 @@
             <vk:content>
               <vk:ContainerContent title="Mapa" icon="sap-icon://map-2">
                 <vk:content>
+                  <!--
+                  nome
+                  endereco, numero, complemento
+                  telefones
+                  bairro, cep, cidade, uf
+                  tipoAtendimento
+                  especialidades
+                  -->
                   <vbm:GeoMap id="map">
                     <vbm:vos>
+                      <vbm:Spots items="{/}">
+                        <vbm:items>
+                          <vbm:Spot position="{pos}" tooltip="{tooltip}" text="{text}"/>
+                        </vbm:items>
+                      </vbm:Spots>
                     </vbm:vos>
                   </vbm:GeoMap>
                 </vk:content>

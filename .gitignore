@@ -60,3 +60,5 @@ typings/
 # SAPUI5 runtime
 .ui5
 webapp/resources
+
+webapp/data

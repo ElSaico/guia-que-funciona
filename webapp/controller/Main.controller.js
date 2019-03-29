@@ -1,10 +1,14 @@
 sap.ui.define([
-  'sap/ui/core/mvc/Controller'
-], function (Controller) {
+  'sap/ui/core/mvc/Controller',
+  'sap/ui/model/json/JSONModel'
+], function (Controller, JSONModel) {
   'use strict';
 
   return Controller.extend('guiaquefunciona.controller.Main', {
     onInit: function (oEvent) {
+      var oModel = new JSONModel('data/recursos-266888.json');
+      this.getView().setModel(oModel);
+
       var oMap = this.getView().byId('map');
       var oMapConfig = {
         MapProvider: [
