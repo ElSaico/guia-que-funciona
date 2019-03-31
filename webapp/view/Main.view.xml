@@ -6,13 +6,15 @@
         <content>
           <vk:MapContainer autoAdjustHeight="true">
             <vk:listPanelStack>
-              <vk:ListPanelStack width="230px">
+              <vk:ListPanelStack>
                 <vk:content>
                   <vk:ListPanel headerText="Legend" headerIcon="sap-icon://legend" expanded="true"
                                 selectionMode="SingleSelectMaster">
                     <vk:items>
-                      <GroupHeaderListItem title="Transport" upperCase="false"/>
-                      <vk:LegendItem title="Truck" icon="sap-icon://shipping-status"/>
+                      <GroupHeaderListItem title="Tipo de atendimento" upperCase="false"/>
+                      <vk:LegendItem icon="sap-icon://bed" title="HOSPITAIS"/>
+                      <vk:LegendItem icon="sap-icon://stethoscope" title="MÉDICOS E CONSULTÓRIOS"/>
+                      <vk:LegendItem icon="sap-icon://syringe" title="LABORATÓRIOS E CENTRO DE DIAGNÓSTICOS"/>
                     </vk:items>
                   </vk:ListPanel>
                 </vk:content>
@@ -29,11 +31,11 @@
                   tipoAtendimento
                   especialidades
                   -->
-                  <vbm:GeoMap id="map">
+                  <vbm:GeoMap id="map" initialPosition="-51.23019;-30.03283;0">
                     <vbm:vos>
                       <vbm:Spots items="{/}">
                         <vbm:items>
-                          <vbm:Spot position="{pos}" tooltip="{tooltip}" text="{text}"/>
+                          <vbm:Spot position="{pos/Longitude};{pos/Latitude};0" tooltip="{nome}" text="{endereco}, {numero}"/>
                         </vbm:items>
                       </vbm:Spots>
                     </vbm:vos>

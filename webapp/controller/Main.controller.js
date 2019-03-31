@@ -5,19 +5,21 @@ sap.ui.define([
   'use strict';
 
   return Controller.extend('guiaquefunciona.controller.Main', {
-    onInit: function (oEvent) {
-      var oModel = new JSONModel('data/recursos-266888.json');
+    onInit: function () {
+      var oModel = new JSONModel('data/recursos-266888-geo.json');
       this.getView().setModel(oModel);
+      this.configureMap();
+    },
 
-      var oMap = this.getView().byId('map');
-      var oMapConfig = {
+    configureMap: function () {
+      this.getView().byId('map').setMapConfiguration({
         MapProvider: [
           {
             name: 'OpenStreetMap',
             tileX: 256,
             tileY: 256,
-            minLOD: 8,
-            maxLOD: 12,
+            minLOD: 7,
+            maxLOD: 19,
             copyright: 'Map data © <a href="https://openstreetmap.org">OpenStreetMap</a> contributors',
             Source: [
               {
@@ -45,8 +47,7 @@ sap.ui.define([
             }
           }
         ]
-      };
-      oMap.setMapConfiguration(oMapConfig);
+      });
     }
   });
 });
