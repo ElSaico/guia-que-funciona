@@ -5,10 +5,16 @@ sap.ui.define([
   'use strict';
 
   return Controller.extend('guiaquefunciona.controller.Main', {
+    _businessTypeIcons: {
+      'HOSPITAIS': '\ue062',
+      'CLÍNICAS': '\ue118',
+      'MÉDICOS E CONSULTÓRIOS': '\ue0fd',
+      'LABORATÓRIOS E CENTRO DE DIAGNÓSTICOS': '\ue138'
+    },
+
     onInit: function () {
-      var oModel = new JSONModel('data/recursos-266888-geo.json');
-      this.getView().setModel(oModel);
       this.configureMap();
+      this.loadData();
     },
 
     configureMap: function () {
@@ -48,6 +54,15 @@ sap.ui.define([
           }
         ]
       });
+    },
+
+    loadData: function () {
+      var oModel = new JSONModel('data/recursos-266888-geo.json');
+      this.getView().setModel(oModel);
+    },
+
+    getBusinessTypeIcon: function (sBusinessType) {
+      return this._businessTypeIcons[sBusinessType];
     }
   });
 });

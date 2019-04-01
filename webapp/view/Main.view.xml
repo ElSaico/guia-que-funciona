@@ -13,6 +13,7 @@
                     <vk:items>
                       <GroupHeaderListItem title="Tipo de atendimento" upperCase="false"/>
                       <vk:LegendItem icon="sap-icon://bed" title="HOSPITAIS"/>
+                      <vk:LegendItem icon="sap-icon://clinical-tast-tracker" title="CLÍNICAS"/>
                       <vk:LegendItem icon="sap-icon://stethoscope" title="MÉDICOS E CONSULTÓRIOS"/>
                       <vk:LegendItem icon="sap-icon://syringe" title="LABORATÓRIOS E CENTRO DE DIAGNÓSTICOS"/>
                     </vk:items>
@@ -35,7 +36,8 @@
                     <vbm:vos>
                       <vbm:Spots items="{/}">
                         <vbm:items>
-                          <vbm:Spot position="{pos/Longitude};{pos/Latitude};0" tooltip="{nome}" text="{endereco}, {numero}"/>
+                          <vbm:Spot position="{pos/Longitude};{pos/Latitude};0" tooltip="{nome}"
+                                    icon="{ path: 'tipoAtendimento', formatter: '.getBusinessTypeIcon' }"/>
                         </vbm:items>
                       </vbm:Spots>
                     </vbm:vos>

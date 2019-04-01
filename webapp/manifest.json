@@ -7,8 +7,8 @@
     "applicationVersion": {
       "version": "1.0.0"
     },
-    "title": "{{appTitle}}",
-    "description": "{{appDescription}}",
+    "title": "Guia que Funciona",
+    "description": "",
     "resources": "resources.json",
     "ach": "ach"
   },
@@ -69,9 +69,7 @@
       "targets": []
     },
     "resources": {
-      "css": [{
-        "uri": "css/style.css"
-      }]
+      "css": []
     }
   }
 }
