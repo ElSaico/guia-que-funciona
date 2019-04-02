@@ -12,10 +12,10 @@
                                 selectionMode="SingleSelectMaster">
                     <vk:items>
                       <GroupHeaderListItem title="Tipo de atendimento" upperCase="false"/>
-                      <vk:LegendItem icon="sap-icon://bed" title="HOSPITAIS"/>
-                      <vk:LegendItem icon="sap-icon://clinical-tast-tracker" title="CLÍNICAS"/>
-                      <vk:LegendItem icon="sap-icon://stethoscope" title="MÉDICOS E CONSULTÓRIOS"/>
-                      <vk:LegendItem icon="sap-icon://syringe" title="LABORATÓRIOS E CENTRO DE DIAGNÓSTICOS"/>
+                      <vk:LegendItem icon="sap-icon://bed" title="Hospitais"/>
+                      <vk:LegendItem icon="sap-icon://clinical-tast-tracker" title="Clínicas"/>
+                      <vk:LegendItem icon="sap-icon://stethoscope" title="Médicos e consultórios"/>
+                      <vk:LegendItem icon="sap-icon://syringe" title="Laboratórios e centros de diagnósticos"/>
                     </vk:items>
                   </vk:ListPanel>
                 </vk:content>
