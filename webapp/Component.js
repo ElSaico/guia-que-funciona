@@ -1,11 +1,10 @@
 sap.ui.define([
   'sap/ui/core/UIComponent',
-  'sap/ui/Device',
-  'guiaquefunciona/model/models'
-], function (UIComponent, Device, models) {
+  'com/sap/cloudscame/model/models'
+], function (UIComponent, models) {
   'use strict';
 
-  return UIComponent.extend('guiaquefunciona.Component', {
+  return UIComponent.extend('com.sap.cloudscame.Component', {
 
     metadata: {
       manifest: 'json'

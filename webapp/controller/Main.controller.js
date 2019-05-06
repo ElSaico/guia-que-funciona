@@ -4,7 +4,7 @@ sap.ui.define([
 ], function (Controller, JSONModel) {
   'use strict';
 
-  return Controller.extend('guiaquefunciona.controller.Main', {
+  return Controller.extend('com.sap.cloudscame.controller.Main', {
     _businessTypeIcons: {
       'HOSPITAIS': '\ue062',
       'CLÍNICAS': '\ue118',

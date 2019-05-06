@@ -1,4 +1,4 @@
-<mvc:View controllerName="guiaquefunciona.controller.Main" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+<mvc:View controllerName="com.sap.cloudscame.controller.Main" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
           xmlns:vk="sap.ui.vk" xmlns:vbm="sap.ui.vbm">
   <App id="idAppControl">
     <pages>
